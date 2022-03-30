@@ -1,0 +1,38 @@
+[data paths]
+path_local =  ./datasets_training_testing/
+train_imgs_original = dataset_imgs_train.hdf5
+train_groundTruth = dataset_groundTruth_train.hdf5
+test_imgs_original = dataset_imgs_test.hdf5
+test_groundTruth = dataset_groundTruth_test.hdf5
+
+path_local0 =  ./datasets_training_testing0/
+train_imgs_original0 = dataset_imgs_train0.hdf5
+train_groundTruth0 = dataset_groundTruth_train0.hdf5
+test_imgs_original0 = dataset_imgs_test0.hdf5
+test_groundTruth0 = dataset_groundTruth_test0.hdf5
+
+
+[experiment name]
+name = test
+name1 = test1
+name2 = test2
+name3 = test3
+name5 = test5
+name6 = test6
+
+[training settings]
+#Number of training epochs
+N_epochs = 100
+batch_size = 1
+
+[testing settings]
+#Choose the model to test: best==epoch with min loss, last==last epoch
+best_last = best
+#number of full images for the test (max 20)
+full_images_to_test = 101
+#How many original-groundTruth-prediction images are visualized in each image
+N_group_visual = 1
+#Compute average in the prediction, improve results but require more patches to be predicted
+average_mode = True
+#if running with nohup
+nohup = False
